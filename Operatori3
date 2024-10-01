@@ -1,13 +1,10 @@
-let a= null;
-let b= null;
+let num1= parseInt(prompt('inserisci il primo numero'));
+let num2= parseInt(prompt('inserisci il secondo numero'));
+let somma= num1+num2;
+let sottrazione= num1-num2;
+let moltiplicazione= num1*num2;
+let divisione= num1/num2;
+let potenza= num1**num2;
 
-let somma= a+b;
-console.log(somma);
-
-let sottrazione= a-b;
-let moltiplicazione= a*b;
-let divisione= a/b;
-let potenza= a**b;
-
-
-console.log(`Con i numeri da te scelti, i risultati delle varie operazioni sono: somma ${somma}, sottrazione ${sottrazione}, moltiplicazione ${moltiplicazione}, divisione ${divisione}, potenza ${potenza}`);
+console.log('con i numeri da te scelti, i risultati delle varie operazioni sono:');
+console.log(`somma= ${somma}, sottrazione ${sottrazione}, moltiplicazione ${moltiplicazione}, divisone ${divisione}, potenza ${potenza}`);
