@@ -1,0 +1,13 @@
+let a= null;
+let b= null;
+
+let somma= a+b;
+console.log(somma);
+
+let sottrazione= a-b;
+let moltiplicazione= a*b;
+let divisione= a/b;
+let potenza= a**b;
+
+
+console.log(`Con i numeri da te scelti, i risultati delle varie operazioni sono: somma ${somma}, sottrazione ${sottrazione}, moltiplicazione ${moltiplicazione}, divisione ${divisione}, potenza ${potenza}`);
