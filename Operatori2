@@ -1,0 +1,9 @@
+let a= 2024;
+let b= 1997;
+let età= 2024-1997;
+console.log(età);
+
+let fine= 100-età;
+console.log(fine);
+
+console.log(' Hai ' + età + ' anni e ti mancano ' + fine + ' anni per compierne 100 ');
