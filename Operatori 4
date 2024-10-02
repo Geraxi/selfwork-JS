@@ -1,9 +1,13 @@
-let numgatti= 20;
-let gattiinfila= 4;
+let numGattiTotali= 44;
+let numGattiInFila= 6;
+let numFile= Math.floor (numGattiTotali/numGattiInFila);
+console.log(numFile);
 
-let filetot= numgatti/gattiinfila;
-console.log(filetot);
+let numRimastiFuori= numGattiTotali % numGattiInFila;
+console.log(numRimastiFuori);
+
+let numMancanti= numGattiInFila - numRimastiFuori;
+console.log(numMancanti);
 
 
-let nuovafila= numgatti/filetot;
-console.log(nuovafila);
+console.log (`Ci sono ${numFile} file di gatti e ne mancano ${numMancanti} per una nuova fila, con un avanzo di ${numRimastiFuori}`);
