@@ -1,0 +1,9 @@
+let numgatti= 20;
+let gattiinfila= 4;
+
+let filetot= numgatti/gattiinfila;
+console.log(filetot);
+
+
+let nuovafila= numgatti/filetot;
+console.log(nuovafila);
