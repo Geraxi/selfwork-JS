@@ -1,0 +1,34 @@
+let temp= -10
+
+if(temp<20){
+    console.log('non ci sono più mezze stagioni');
+}else if(temp>=30){
+    console.log('lu mare, lu sole, lu ientu');
+}else if(temp<30){
+    console.log('mi dia una peroni sudata');
+}else if(temp<0){
+    console.log('non é tanto il freddo quanto lumidità');
+}else if(temp<-10){
+    console.log('copriti...ancora ti raffreddi');
+}
+
+let temperatura= 30
+let esclam:
+
+switch(true){
+    case temperatura<20:
+        esclam='non ci sono piu mezze stagioni'
+        break;
+    case temperatura>=30:
+        esclam='lu mare, lu sole, lu ientu'
+        break;
+    case temperatura<30:
+        esclam='mi dia una peroni sudata'
+        break;
+    case temperatura<0:
+        esclam='non é tanto il freddo quanto lumidita'
+        break;
+    case temperatura<-10:
+        esclam='copriti...ancora ti raffreddi'
+        break;
+}
