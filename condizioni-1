@@ -1,6 +1,6 @@
 let voto=21;
 
-if (voto<18);{
+if (voto<18){
     console.log('insufficiente');
 }else if(voto>=18 && voto>21){
     console.log('sufficiente');
@@ -12,4 +12,30 @@ if (voto<18);{
     console.log('ottimo');
 }else if(voto=30){
     console.log('eccellente');
+}
+
+
+let giudizio;
+
+switch(true){
+    case voto<=18:
+        giudizio= 'insufficiente'
+        break;
+    case voto<=18 && voto<=21:
+        giudizio='sufficiente'
+        break;
+    case voto>21 && voto<=24:
+        giudizio='buono'
+        break;
+    case voto>24 && voto<=27:
+        giudizio='distinto'
+        break;
+    case voto>27 && voto<=29:
+        giudizio='ottimo'
+        break;
+    case voto==30:
+        giudizio='eccelente'
+        break;
+    default:
+        giudizio='voto non valido'
 }
