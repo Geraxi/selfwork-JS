@@ -1,4 +1,4 @@
-let temp= -10
+let temp= Number(prompt('inserisci la temp:'));
 
 if(temp<20){
     console.log('non ci sono più mezze stagioni');
@@ -12,23 +12,25 @@ if(temp<20){
     console.log('copriti...ancora ti raffreddi');
 }
 
-let temperatura= 30
-let esclam:
+
+
+let temperatura= Number(prompt('inserisci la temperatura:'));
+let descrizione:
 
 switch(true){
-    case temperatura<20:
-        esclam='non ci sono piu mezze stagioni'
-        break;
-    case temperatura>=30:
-        esclam='lu mare, lu sole, lu ientu'
-        break;
-    case temperatura<30:
-        esclam='mi dia una peroni sudata'
+    case temperatura<=-10:
+        descrizione='copriti...ancora ti raffreddi'
         break;
     case temperatura<0:
-        esclam='non é tanto il freddo quanto lumidita'
+        descrizione='non é tanto il freddo quanto lumidità'
         break;
-    case temperatura<-10:
-        esclam='copriti...ancora ti raffreddi'
+    case temperatura<30:
+        descrizione='mi dia una peroni sudata'
+        break;
+    case temperatura>=30:
+    descrizione='lu mare, lu sole, lu ientu'
+    break;
+    case temperatura<20:
+        descrizione='non ci sono piu mezze stagioni'
         break;
 }
