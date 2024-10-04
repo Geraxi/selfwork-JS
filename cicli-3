@@ -1,0 +1,9 @@
+let choose_beverage= prompt('Scegli una bevanda: 1-Acqua \n2-Coca Cola \n3-Birra');
+
+if(choose_beverage==1){
+console.log('è stata selezionata Acqua');
+}else if (choose_beverage==2){
+    console.log('è stata selezionata la coca cola');
+}else(choose_beverage==3);{
+    console.log('È stata selezionata la birra');
+}
