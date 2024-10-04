@@ -15,7 +15,9 @@ do{
         case 3:
             console.log('é stata selezionata la birra');
             break;
+
             default:
                 console.log('la scelta inserita non é valida, riprova');
+                
     }
 }while(scelta<1 || scelta>3)
