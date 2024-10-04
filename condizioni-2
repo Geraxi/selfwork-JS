@@ -14,23 +14,33 @@ if(temp<20){
 
 
 
-let temperatura= Number(prompt('inserisci la temperatura:'));
-let descrizione:
+
+
+let temperatura= Number(prompt('Inserisci la temperatura:'));
+
+let descrizione;
 
 switch(true){
-    case temperatura<=-10:
-        descrizione='copriti...ancora ti raffreddi'
+    case temperatura <=10:
+        descrizione= 'copriti...ancora ti raffreddi'
         break;
-    case temperatura<0:
-        descrizione='non é tanto il freddo quanto lumidità'
+
+    case temperatura <0:
+        descrizione= 'non é il freddo quanto lumidita'
         break;
-    case temperatura<30:
-        descrizione='mi dia una peroni sudata'
+    case temperatura <20:
+        descrizione= 'non ci sono piu mezze stagioni'
         break;
-    case temperatura>=30:
-    descrizione='lu mare, lu sole, lu ientu'
-    break;
-    case temperatura<20:
-        descrizione='non ci sono piu mezze stagioni'
+
+    case temperatura <30:
+        descrizione= 'mi dia una peroni sudata'
         break;
+
+    default:
+        descrizione= 'lu mare, lu sole, lu ientu'
+        
+
 }
+
+console.log(descrizione);
+
