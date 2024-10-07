@@ -1,0 +1,12 @@
+let_array1= [
+    ['un','per','incatenarli.'], ['Anello','trovarli'],['ghermirli','e'],['gondor','mark'],];
+
+    let_array2 =[[['trovarli']], ['tu','sciocchi'],['tu,','sciocchi',['padron','Sauron']],['nel',['fuggite','gandalf']],[['domarli','passare'],'buio']];
+
+
+    console.log(let_array1);
+    console.log(let_array2);
+
+
+    let_arrayfin= ['Un', 'Anello','per','domarli,','un','Anello','per','trovarli','un','Anello','per','ghermirli','e','nel','buio','incatenarli.'];
+    console.log(let_arrayfin);
