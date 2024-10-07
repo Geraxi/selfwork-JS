@@ -1,12 +1,35 @@
-let_array1= [
-    ['un','per','incatenarli.'], ['Anello','trovarli'],['ghermirli','e'],['gondor','mark'],];
+let dato1= [
+    ['un','per','incatenarli.'],
+    ['Anello','trovarli,'],
+    ['ghermirli','e'],
+    ['gondor','mark'],
+];
 
-    let_array2 =[[['trovarli']], ['tu','sciocchi'],['tu,','sciocchi',['padron','Sauron']],['nel',['fuggite','gandalf']],[['domarli','passare'],'buio']];
+let dato2= [
+    [['trovarli,']],
+    ['tu,','sciocchi'],
+    ['tu,','sciocchi',['padron','Sauron']],
+    ['nel',['fuggite','gandalf']],
+    [['domarli,','passare'],'buio']
+];
 
 
-    console.log(let_array1);
-    console.log(let_array2);
+console.log(
+    dato1[0][0],
+    dato1[1][0],
+    dato1[0][1],
+    dato2[4][0][0],
+    dato1[0][0],
+    dato1[1][0],
+    dato1[0][1],
+    dato1[1][1],
+    dato1[0][0],
+    dato1[1][0],
+    dato1[0][1],
+    dato1[2][0],
+    dato1[2][1],
+    dato2[3][0],
+    dato2[4][1],
+    dato1[0][2],
 
-
-    let_arrayfin= ['Un', 'Anello','per','domarli,','un','Anello','per','trovarli','un','Anello','per','ghermirli','e','nel','buio','incatenarli.'];
-    console.log(let_arrayfin);
+)
