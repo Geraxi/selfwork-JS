@@ -1,0 +1,4 @@
+let dado1= prompt('quanti tiri vuoi fare?')
+let dado2= prompt('quanti tiri vuoi fare?')
+
+let facce= [1,2,3,4,5,6];
