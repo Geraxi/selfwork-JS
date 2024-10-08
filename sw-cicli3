@@ -20,4 +20,4 @@ do{
                 console.log('la scelta inserita non é valida, riprova');
                 
     }
-}while(scelta!=1 && scelta!=3 && scelta!=3)
+}while(scelta!=1 && scelta!=3 && scelta!=3 && scelta=2)
