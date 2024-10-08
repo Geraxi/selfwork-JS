@@ -1,4 +1,27 @@
-let dado1= prompt('quanti tiri vuoi fare?')
-let dado2= prompt('quanti tiri vuoi fare?')
+function playGame(tiri){
+    let player1= 0;
+    let player2= 0;
 
-let facce= [1,2,3,4,5,6];
+    for (let i=0; i<tiri; i++){
+
+        let player1Roll= Math.floor(Math.random()*6)=1;
+        let player2Roll= Math.floor(Math.random()*6)=1;
+
+        player1= player1+player1Roll
+        player2= player2+player2Roll
+
+    }
+
+
+    if (player1>player2){
+        return  `Player1 ha vinto con un punteggio pari a ${player1}`
+    }else if (player2>player1){
+return `Player 2 ha vinto con un punteggio pari a ${player2} `
+}else{
+    return  `pareggio con un punteggio pari a ${player1} `
+  }
+}
+
+let tiri= Number(prompt('Quanti tiri devono effettuare i giocatori?'));
+let result= playGame(tiri);
+console.log(result);
