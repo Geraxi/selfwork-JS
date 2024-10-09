@@ -1,0 +1,8 @@
+let str='i topi non avevano nipoti';
+
+let splitted= str.split('').reverse();
+if(str==splitted){
+    console.log('True');
+}else{
+    console.log('False');
+}
