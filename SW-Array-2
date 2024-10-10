@@ -1,0 +1,5 @@
+let numeri=[3,5,10,2,8];
+
+let somma= numeri.reduce((acc,n)=> acc+n);
+console.log(somma);
+
