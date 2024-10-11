@@ -8,3 +8,6 @@ console.log(media);
 
 let ValoriMinoriMedia= numeri.filter(numeri=>numeri<media)
 console.log(ValoriMinoriMedia);
+
+let ValoriMaggioriMedia= numeri.filter(numeri=>numeri>media)
+console.log(ValoriMaggioriMedia);
