@@ -1,0 +1,15 @@
+let rubrica = {
+    'contacts': [
+        {'nome': 'Nicola', 'telefono':3331111111},
+        {'nome': 'Lorenzo', 'telefono':3332222222},
+        {'nome': 'Paola', 'telefono':3333333333},
+        {'nome': 'Jenny', 'telefono':3334444444}
+    ],
+      
+    'mostra_contacts': function(){
+    console.log(rubrica.contacts);
+   
+}
+  }
+
+  rubrica.mostra_contacts();
