@@ -13,3 +13,7 @@ let rubrica = {
   }
 
   rubrica.mostra_contacts();
+
+
+// non è stato ancora discusso come invocare i contatti in forma di oggetti, come specificato nella lezione precedente, saranno
+approfonditi nella prossima lezione. 
