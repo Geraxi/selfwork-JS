@@ -1,0 +1,10 @@
+let persona= {
+    nome: 'Umberto',
+    cognome: 'Geraci',
+    età: 27,
+    saluta: function(){
+        console.log('Ciao a tutti mi chiamo Umberto');
+    }
+}
+
+persona.saluta();
