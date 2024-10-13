@@ -1,71 +1,75 @@
 
-let check= Number(prompt('premi 1 se vuoi eliminare o aggiungere un contatto, premi 2 se vuoi modificare un contatto'))
+let name;
+let number;
+
+let check= Number(prompt('premi 1 se vuoi eliminare o aggiungere un contatto, \n premi 2 se vuoi modificare un contatto'));
 
 let rubrica = {
     listaContatti:[
         {nome: 'Nicola', number:3331111111},
-        {nome: 'Lorenzo',number:3332222222},
+        {nome: 'Lorenzo', number:3332222222},
         {nome: 'Paola', number:3333333333},
         {nome: 'Jenny', number:3334444444},
     ],
 
-    showAllContacts:function(){
+    showAllContacts: function(){
         this.listaContatti.forEach(contatto=>{
-            console.log(`${contatto.name}:${contatto.number}`);
+            console.log(`${contatto.nome}:${contatto.number}`);
         })
-    }
+    },
 
-    showContact:function(name){
-        let contatto= this.listaContatti.find(contatto=>contatto.name=nome)
+    showContact:function(nome){
+        let contatto= this.listaContatti.find(contatto=>contatto.nome==nome);
         if(contatto){
-            console.log(`contatto trovato: ${contatto.name}:{contatto.number}`);
+            console.log(`contatto trovato: ${contatto.nome}:${contatto.number}`);
         }else{
             console.log('CONTATTO NON TROVATO');
         }
-    }
+    },
+    removeAddContacts: function(nome,numero){
 
-    removeAddContacts:function(name,numero){
-        letContatto=this.listaContatti.find(contatto=>contatto.name==nome)
-        let index= this.listaContatti.indexOf(contatto)
-        if (contatto){
-            this.listaContatti.splice(index1)
-            console.log('CONTATTO ELIMINATO');
+        let contatto=this.listaContatti.find(contatto => contatto.name == nome)
+        let index = this.listaContatti.indexOf(contatto)
+        if(contatto){
+            this.listaContatti.splice(index, 1)
+            console.log('CONTATTO ELIMINATO');   
         }else{
-            this.listaContatti.push({name:nome,number:numero})
-            console.log('CONTATTO AGGIUNTO');
+            this.listaContatti.push({name: nome, number: numero})
         }
-    }
+    },
 
-    editContact:function(name,newNumber){
-        let contatto= this.listaContatti.find(contatto=>contatto.name==name)
-
+    editContact: function(nome, newNumber){
+        let contatto = this.listaContatti.find(contatto => contatto.name == nome)
         if(contatto){
             console.log('CONTATTO MODIFICATO');
-            contatto.number=newNumber
+            contatto.number = newNumber
         }else{
             console.log('CONTATTO NON TROVATO');
         }
-        rubrica.editContact('Anna',123456)
     }
-
-
-    switch(check){
-        case 1:
-            name= prompt('inserisci il nome del contatto')
-            number=prompt('inserisci il numero del contatto')
-            rubrica.removeAddContacts(name,number)
-
-            break;
-
-        case 2:
-            name= prompt('inserisci il nome del contatto')
-            number=prompt('inserisci il numero del contatto')
-                rubrica.editContact(name,number)
-            
-    }
-
 }
-rubrica.showAllContacts()
-rubrica.showContact('Anna')
-rubrica.removeAddContacts(name,number)
+
+//rubrica.showAllContacts()
+//rubrica.showContact('Lorenzo')
+//rubrica.removeAddContacts()
+//rubrica.editContact('Anna', 12467910 )
+//rubrica.showAllContacts()
+       
+//creamo lo switch per dividere le funzionalita e gestirle meglio
+
+switch (check) {
+    case 1:
+        name = prompt('inserisci il nome del contatto')
+        number= prompt('inserisci il numero del contatto')
+        rubrica.removeAddContacts(name,number)
+        break;
+    case 2:
+        name = prompt('inserisci il nome del contatto')
+        number= prompt('inserisci il numero del contatto')
+        rubrica.editContact(name,number)
+        
+    default:
+        break;
+}
+
 rubrica.showAllContacts()
