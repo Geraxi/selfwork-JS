@@ -1,0 +1,7 @@
+let btnNuovoArticolo= document.querySelector('#btnNuovoArticolo')
+let date= newDate()
+let formateDate= date.toLocaleDateString()
+
+btnNuovoArticolo.addEventListener('click', ()=>{
+    
+})
