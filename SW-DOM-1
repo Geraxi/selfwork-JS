@@ -1,23 +1,32 @@
+let paragrafi= document.querySelectorAll('p')
 let changeColorBtn= document.querySelector('#changeColorBtn');
 let changeTextBtn= document.querySelector('#changeTextBtn');
 let changeAppearBtn= document.querySelector('#changeAppearBtn');
 
-let paragrafi= document.querySelectorAll('p')
 
 changeColorBtn.addEventListener('click',()=>{
   
-    paragrafi.forEach((p,i)=>{
-        if(i==1){
-            p.style.color='red';
-        }else if(i==2){
-            p.style.color='green';
-        }else(i==0)
-            p.style.color='blue';
+    paragrafi.forEach(paragrafo=>{
+        let r= Math.floor(Math.random()*256)
+        let g= Math.floor(Math.random()*256)
+        let b= Math.floor(Math.random()*256)
+        paragrafo.style.color= `rgb(${r},${g},${b})`
         });
     })
 
     changeTextBtn.addEventListener('click',()=>{
-        paragrafi.forEach((p,i)=>{
-            
+        paragrafi.forEach(paragrafo=>{
+            paragrafo.style.fontWeight='bold'
+
         })
     })
+    
+   changeAppearBtn.addEventListener('clickl',()=>{
+    paragrafi.forEach(paragrafo=>{
+        if(paragrafo.style.display=='block'){
+            paragrafo.style.display='none'
+        }else{
+            paragrafo.style.display='block'
+        }
+    })
+   })
