@@ -12,7 +12,7 @@ btnColor.addEventListener('click', () => {
     });
 });
 
-btnColor.addEventListener('click', () => {
+btnBold.addEventListener('click', () => {
     paragrafi.forEach(paragrafo => {
         paragrafo.style.fontWeight = 'bold';
     });
