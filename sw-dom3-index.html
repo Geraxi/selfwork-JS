@@ -8,11 +8,15 @@
 <body>
 
 <h1 class="text-center">Countdown</h1>
-<input type="number" id="countDownInput" placeholder="Inserisci secondi" min="1">
+<label for="countdown-input">Inserisci il tempo in secoondi</label>
+<input type="number" id="countDownInput" min="1" max="3600">
 
-<button id="btnStartCountDown">Start Countdown</button>
-<button id="btnPause">Pause</button>
-<button id="btnReset">Reset</button>
+<p>Tempo rimanente: <span id="remainingTime">--</span></p>
+
+
+<button id="startBtn" class="btn btn-info">Start Countdown</button>
+<button id="stopBtn" class="btn btn-warning">Pause</button>
+<button id="resetBtn" class="btn btn-success">Reset</button>
 
 
 
