@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(13,2,8);
+    color: rgb(0,255,65);
+}
+
+.custom-shadow{
+    box-shadow: 2px 2px 5px;
+}
+
+.btn-custom{
+    height: 100px;
+    width: 200px;
+    color: rgb(0,255,65);
+    background-color: transparent;
+    border: 2px solid rgb(0,255,65);
+    display:block;
+    margin:20px auto;
+}
+
+.btn-custom:hover{
+    background-color: rgb(0,255,65);
+    color:rgb(13, 2, 8);
+}
+
+p{
+    margin:0;
+    padding:0;
+}
+
+.icon{
+    cursor:pointer
+}
