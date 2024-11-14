@@ -1,44 +1,77 @@
-const rubrica = {
-    lista_contatti: [
-        {contact_name: 'Yoda', phone_number: 3333333333},
-        {contact_name: 'Anakin', phone_number: 344444444},
-        {contact_name: 'Obi-wan', phone_number: 355555555},
+let nameInput= document.querySelector('#nameInput')
+let numberInput= document.querySelector('#numberInput')
+
+btnShow= document.querySelector('#btnShow')
+btnAdd= document.querySelector('#btnAdd')
+btnRemove= document.querySelector('#btnRemove')
+btnEdit= document.querySelector('#btnEdit')
+
+let containerContact= document.querySelector('.containerContacts')
+
+let rubrica= {
+    listaContatti:[
+        {name:'Mario', number:1234567890},
+        {name:'Walter', number:234567654}
     ],
 
-    showContacts: function() {
-        this.lista_contatti.forEach((contatto) => {
-            let div = document.createElement('div');
-            div.classList.add('card-custom');
-
-           
-            div.innerHTML = `
-                <p class='lead'>Nome: ${contatto.contact_name}</p>
-                <p>Telefono: ${contatto.phone_number}</p>
-                <i class='fa-solid fa-trash-can icon'></i>
-            `;
-
-            
-          contactWrapper.appendChild(div);
-        });
-
-        showContactsBtn.addEventListener('click',()=>{
-            if(check==false){
-                rubrica.showContacts();
-                check==true;
-                this.showContactsBtn.innerHTML='Nascondi Contatti';
-            }else{
-                contactsWrapper.innerHTML='';
-                check==false;
-                showContactsBtn.innerHTML='Mostra Contatti';
-            }
-        });
+    showContacts: function(){
+        this.listaContatti.forEach(contatto =>{
+            let p= document.createElement('p')
+            p.innerHTML= `${contatto.name}: ${contatto.number}`
+            containerContact.appendChild(p)
+        })
     },
 
-    addContact:function(newName, newNumber){
-        this.lista_contatti.push({contact_name: newName, phone_number: newNumber});
-        this.showContacts();
+    addContacts: function(newName, newNumber){
+        this.listaContatti.push({name:newName, number: newNumber})
+    },
+
+    removeContacts: function(){
+        let filtered= this.listaContatti.filter(contatto => contatto.name !=removeName)
+        this.listaContatti=filtered
+    },
+
+    editContacts:function (nome,numero){
+        this.listaContatti.forEach(contatto=>{
+            if(contatto.name==nome){
+                contatto.number=numero
+            }
+        })
     }
-};
+}
+
+btnShow.addEventListener('click',()=>{
+    if(check==false){
+        rubrica.showContacts()
+        btnShow.innerHTML='Nascondi Contatti'
+        check==true
+    }else{
+        check=false
+        containerContact.innerHTML=''
+        btnShow.innerHTML='Mostra Contatti'
+    }
+})
+
+btnAdd.addEventListener('click', () => { 
+    if (nameInput.value !== '') { 
+        rubrica.addContacts(nameInput.value, numberInput.value);
+        nameInput.value = '';
+        numberInput.value = '';
+    }
+});
 
 
-rubrica.showContacts();
+btnRemove.addEventListener('click',()=>{
+    if(nameInput !=''){
+        rubrica.removeContacts(nameInput.value)
+        nameInput.value=''
+    }
+})
+
+btnEdit.addEventListener('click',()=>{
+    if(nameInput !=''){
+        rubrica.editContacts(nameInput.value, numberInput.value)
+        nameInput.value=''
+        numberInput.value=''
+    }
+})
